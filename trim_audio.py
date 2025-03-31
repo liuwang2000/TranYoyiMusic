@@ -12,7 +12,28 @@ old_music_dir = os.path.join(music_dir, 'old')
 
 # 复用FFmpeg路径配置
 ff_path = os.path.dirname(os.path.abspath(__file__))
-os.environ['PATH'] = os.environ['PATH'] + os.pathsep + r'C:\Program Files\FFmpeg\bin'
+
+# 检查FFmpeg可用性
+ffmpeg_path = None
+# 首先检查项目目录下的FFmpeg
+local_ffmpeg_path = os.path.join(ff_path, 'ffmpeg-2025-03-24-git-cbbc927a67-full_build', 'bin')
+if os.path.isfile(os.path.join(local_ffmpeg_path, 'ffmpeg.exe')):
+    ffmpeg_path = local_ffmpeg_path
+    os.environ['PATH'] = os.environ['PATH'] + os.pathsep + ffmpeg_path
+    print(f"已检测到本地FFmpeg: {ffmpeg_path}")
+else:
+    # 如果本地没有，尝试系统PATH中的FFmpeg
+    try:
+        subprocess.run(['ffmpeg', '-version'], check=True,
+                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("已检测到系统FFmpeg")
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        print(f"当前工作目录: {ff_path}")
+        print(f"尝试的ffmpeg路径: {local_ffmpeg_path}")
+        print("未检测到FFmpeg，请执行以下操作：")
+        print("1. 运行install_ffmpeg.bat自动安装")
+        print("2. 或手动下载FFmpeg并解压到项目目录")
+        exit(1)
 
 # 时间格式验证函数
 def validate_time(input_time):

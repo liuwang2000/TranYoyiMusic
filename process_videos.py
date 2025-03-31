@@ -37,29 +37,26 @@ try:
 except Exception as e:
     print(f"清理旧MP3文件时出错: {str(e)}")
 
-os.environ['PATH'] = os.environ['PATH'] + os.pathsep + r'C:\Program Files\FFmpeg\bin'
 # 检查FFmpeg可用性
 ffmpeg_path = None
-for path in [
-    os.path.join(ff_path, 'ffmpeg-2025-03-24-git-cbbc927a67-full_build\\bin'),
-]:
-    if os.path.isfile(os.path.join(path, 'ffmpeg.exe')):
-        ffmpeg_path = path
-        break
-
-if ffmpeg_path:
+# 首先检查项目目录下的FFmpeg
+local_ffmpeg_path = os.path.join(ff_path, 'ffmpeg-2025-03-24-git-cbbc927a67-full_build', 'bin')
+if os.path.isfile(os.path.join(local_ffmpeg_path, 'ffmpeg.exe')):
+    ffmpeg_path = local_ffmpeg_path
     os.environ['PATH'] = os.environ['PATH'] + os.pathsep + ffmpeg_path
+    print(f"已检测到本地FFmpeg: {ffmpeg_path}")
 else:
+    # 如果本地没有，尝试系统PATH中的FFmpeg
     try:
         subprocess.run(['ffmpeg', '-version'], check=True,
                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("已检测到系统FFmpeg")
     except (subprocess.CalledProcessError, FileNotFoundError):
-        print(f"当前base_dir路径: {base_dir}")
-        print(f"尝试的ffmpeg路径: {os.path.join(base_dir, 'ffmpeg-2025-03-24-git-cbbc927a67-full_build\\bin')}")
+        print(f"当前工作目录: {ff_path}")
+        print(f"尝试的ffmpeg路径: {local_ffmpeg_path}")
         print("未检测到FFmpeg，请执行以下操作：")
-        print("1. 手动下载FFmpeg（https://www.gyan.dev/ffmpeg/builds/）")
-        print("2. 解压后将bin目录添加到系统PATH环境变量")
-        print("3. 或直接运行install_ffmpeg.bat自动安装")
+        print("1. 运行install_ffmpeg.bat自动安装")
+        print("2. 或手动下载FFmpeg并解压到项目目录")
         exit(1)
 
 def validate_date(input_date):

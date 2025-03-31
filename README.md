@@ -26,17 +26,20 @@ TranMusic 是一款专为音乐学习与整理设计的工具，可以轻松从�
 
 - 💻 Windows 操作系统
 - 🐍 Python 3.8 或更高版本
-- 🎞️ FFmpeg（可通过安装脚本自动安装）
+- 🎞️ FFmpeg（通过安装脚本自动安装）
 
 ## 🚀 快速开始
 
 ### 🔍 安装 FFmpeg
 
 - **自动安装**：双击运行 `install_ffmpeg.bat` 即可完成安装
+  - 脚本会自动从GitHub下载FFmpeg并解压到项目目录中
+  - 解压完成后即可使用，无需额外配置环境变量
+
 - **手动安装**：
-  1. 访问 [FFmpeg官方网站](https://www.gyan.dev/ffmpeg/builds/) 下载完整版FFmpeg
-  2. 解压到 `C:\Program Files\FFmpeg`
-  3. 添加环境变量：右键【此电脑】→【属性】→【高级系统设置】→【环境变量】→ 在Path变量中添加 `C:\Program Files\FFmpeg\bin`
+  1. 从[GitHub](https://github.com/GyanD/codexffmpeg/releases/download/2025-03-24-git-cbbc927a67/ffmpeg-2025-03-24-git-cbbc927a67-full_build.zip)下载FFmpeg压缩包
+  2. 将下载的压缩包解压到项目根目录
+  3. 确保解压后的文件夹名为`ffmpeg-2025-03-24-git-cbbc927a67-full_build`
 
 ### 📹 从视频提取音频
 
@@ -125,6 +128,7 @@ TranMusic/
 ## 📝 更新日志
 
 - 2025.03.31 初始版本发布
+- 2025.04.01 更新安装脚本，简化FFmpeg安装流程
 
 ---
 
