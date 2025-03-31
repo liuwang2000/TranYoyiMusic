@@ -1,1 +1,3 @@
-python H:\Yoyi\TranMusic\trim_audio.py
+@echo off
+cd /d "%~dp0"
+python trim_audio.py

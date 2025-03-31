@@ -1,1 +1,3 @@
-python H:\Yoyi\TranMusic\process_videos.py
+@echo off
+cd /d "%~dp0"
+python process_videos.py
