@@ -51,13 +51,13 @@ TranMusic 是一款专为音乐学习与整理设计的工具，可以轻松从�
 - **自动安装**：双击运行 `install_ffmpeg.bat` 即可完成安装
   - 脚本会自动从GitHub下载FFmpeg并解压到项目目录中
   - 解压完成后即可使用，无需额外配置环境变量
-  - ⚠️ 需下载约**170MB**文件，建议使用稳定网络
+  - ⚠️ 需下载约**88MB**文件，建议使用稳定网络
   - 🌐 从GitHub下载可能需要科学上网，如遇问题请使用手动安装方式
 
 - **手动安装**：
-  1. 从[GitHub](https://github.com/GyanD/codexffmpeg/releases/download/2025-03-24-git-cbbc927a67/ffmpeg-2025-03-24-git-cbbc927a67-full_build.zip)下载FFmpeg压缩包
+  1. 从[GitHub](https://github.com/GyanD/codexffmpeg/releases/download/2025-03-24-git-cbbc927a67/ffmpeg-2025-03-24-git-cbbc927a67-essentials_build.zip)下载FFmpeg压缩包
   2. 将下载的压缩包解压到项目根目录
-  3. 确保解压后的文件夹名为`ffmpeg-2025-03-24-git-cbbc927a67-full_build`
+  3. 确保解压后的文件夹名为`ffmpeg-2025-03-24-git-cbbc927a67-essentials_build`
 
 ### 📹 从视频提取音频
 
@@ -149,6 +149,10 @@ TranMusic/
 - 所有操作都会记录在日志文件中
 
 ## 📝 更新日志
+
+### v1.3.0
+- 更换使用体积更小的FFmpeg essentials版本(88MB)，减少下载流量
+- 优化批处理文件中文显示问题
 
 ### v1.2.0
 - 修复批处理文件中文显示问题

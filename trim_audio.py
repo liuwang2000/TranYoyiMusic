@@ -16,7 +16,7 @@ ff_path = os.path.dirname(os.path.abspath(__file__))
 # 检查FFmpeg可用性
 ffmpeg_path = None
 # 首先检查项目目录下的FFmpeg
-local_ffmpeg_path = os.path.join(ff_path, 'ffmpeg-2025-03-24-git-cbbc927a67-full_build', 'bin')
+local_ffmpeg_path = os.path.join(ff_path, 'ffmpeg-2025-03-24-git-cbbc927a67-essentials_build', 'bin')
 if os.path.isfile(os.path.join(local_ffmpeg_path, 'ffmpeg.exe')):
     ffmpeg_path = local_ffmpeg_path
     os.environ['PATH'] = os.environ['PATH'] + os.pathsep + ffmpeg_path
