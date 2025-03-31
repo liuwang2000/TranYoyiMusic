@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎵 TranMusic 视频音频提取与处理工具 🎵
+# 🎵 TranYoyiMusic 视频音频提取与处理工具 🎵
 
 <img src="https://github.com/liuwang2000/TranYoyiMusic/blob/main/Yoyi.png" alt="Yoyi" width="180"/>
 
@@ -12,7 +12,7 @@
 
 ## 📝 项目介绍
 
-TranMusic 是一款专为音乐学习与整理设计的工具，可以轻松从视频中提取音频并进行管理。本工具支持从视频文件中提取音频、设置元数据（如作者、专辑、日期等）、剪辑音频片段，并自动整理归档文件。
+TranYoyiMusic 是一款专为音乐学习与整理设计的工具，可以轻松从视频中提取音频并进行管理。本工具支持从视频文件中提取音频、设置元数据（如作者、专辑、日期等）、剪辑音频片段，并自动整理归档文件。
 
 ## ✨ 主要功能
 
@@ -101,7 +101,7 @@ TranMusic 是一款专为音乐学习与整理设计的工具，可以轻松从�
 ## 📂 目录结构
 
 ```
-TranMusic/
+TranYoyiMusic/
 ├── videos/         # 待处理视频存放目录
 │   └── old/        # 处理后视频归档目录
 ├── music/          # 生成的MP3文件目录
@@ -177,6 +177,6 @@ TranMusic/
 
 <img src="Yoyi.png" alt="Yoyi使用示例" width="250"/>
 
-© 2025 TranMusic - 用❤️制作
+© 2025 TranYoyiMusic - 用❤️制作
 
 </div>
