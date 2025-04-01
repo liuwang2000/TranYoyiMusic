@@ -26,16 +26,35 @@ for d in [video_dir, old_video_dir, music_dir, old_music_dir]:
         print(f"创建目录失败: {d}\n错误信息: {str(e)}")
         exit(1)
 
+# 用于移除文件名中的时间戳的函数
+def remove_timestamp(filename):
+    """移除文件名中的时间戳部分 (如 _20240331123456)"""
+    basename, ext = os.path.splitext(filename)
+    # 匹配 _数字(8-14位) 的模式，这通常是时间戳
+    clean_name = re.sub(r'_\d{8,14}', '', basename)
+    return clean_name + ext
+
 # 清理旧MP3文件
 try:
-    for mp3 in os.listdir(music_dir):
-        if mp3.endswith('.mp3'):
-            timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-            new_name = f"{os.path.splitext(mp3)[0]}_{timestamp}.mp3"
-            shutil.move(os.path.join(music_dir, mp3), 
-            os.path.join(old_music_dir, new_name))
+    mp3_count = 0
+    mp3_files = [f for f in os.listdir(music_dir) if f.endswith('.mp3')]
+    
+    if mp3_files:
+        print("初始化: 正在清理音乐目录...")
+        
+    for mp3 in mp3_files:
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+        clean_name = remove_timestamp(mp3)
+        # 创建一个以清理后的文件名为基础的备份名
+        backup_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}.mp3"
+        shutil.move(os.path.join(music_dir, mp3), 
+        os.path.join(old_music_dir, backup_name))
+        mp3_count += 1
+    
+    if mp3_count > 0:
+        print(f"已清理 {mp3_count} 个音频文件")
 except Exception as e:
-    print(f"清理旧MP3文件时出错: {str(e)}")
+    print("清理音频文件时出错")
 
 # 检查FFmpeg可用性
 ffmpeg_path = None
@@ -89,12 +108,86 @@ if not config.has_option('Metadata', 'TPE1') or not config.get('Metadata', 'TPE1
 TPE1_name = config.get('Metadata', 'TPE1')
 TALB_name = config.get('Metadata', 'TALB')
 
+def clean_processed_audio():
+    """清理已处理过的音频文件，移动到old目录"""
+    try:
+        processed_count = 0
+        processed_files = []
+        
+        # 先获取所有需要处理的文件列表
+        files_to_process = []
+        for audio in os.listdir(music_dir):
+            if audio.endswith('.mp3') and not audio.startswith('temp_'):
+                files_to_process.append(audio)
+        
+        # 如果没有文件需要处理，直接返回
+        if not files_to_process:
+            print("没有发现需要清理的音频文件")
+            return
+            
+        print(f"开始清理音频文件，共 {len(files_to_process)} 个文件...")
+            
+        # 逐个处理文件
+        for audio in files_to_process:
+            try:
+                source_path = os.path.join(music_dir, audio)
+                # 检查文件是否仍然存在（可能被其他进程移动）
+                if not os.path.exists(source_path):
+                    continue
+                    
+                # 清理文件名中的时间戳
+                clean_name = remove_timestamp(audio)
+                timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+                new_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}.mp3"
+                dest_path = os.path.join(old_music_dir, new_name)
+                
+                # 移动文件但不输出详细信息
+                shutil.move(source_path, dest_path)
+                
+                # 确认文件已成功移动
+                if os.path.exists(dest_path):
+                    processed_count += 1
+                    processed_files.append(audio)
+            except Exception as file_error:
+                # 减少错误输出的详细程度
+                print(f"移动文件失败: {audio}")
+        
+        # 简化输出结果
+        if processed_count > 0:
+            print(f"清理完成! 已成功移动 {processed_count} 个音频文件")
+        else:
+            print("没有文件被移动")
+        
+        # 记录清理操作到日志 (日志仍然保持详细记录，但不显示给用户)
+        log_entry = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | 清理操作 | 已移动 {processed_count} 个音频文件到 {old_music_dir}\n"
+        if processed_files:
+            log_entry += "已移动文件列表:\n"
+            for file in processed_files:
+                log_entry += f"  - {file}\n"
+                
+        with open(os.path.join(ff_path, 'directory.log'), 'a', encoding='utf-8') as f:
+            f.write(log_entry)
+            
+    except Exception as e:
+        print(f"清理音频文件时出错: {str(e)}")
+        # 简化错误信息输出
+        # print(f"错误类型: {type(e).__name__}")
+        # print(f"错误位置: {e.__traceback__.tb_frame.f_code.co_filename}, 行 {e.__traceback__.tb_lineno}")
+
 while True:
     try:
-        
-
         # 获取视频文件路径
-        input_video = input("请输入视频文件完整路径: ").strip('"')
+        input_video = input("请输入视频文件完整路径 (输入'清理'移动处理过的文件，输入'退出'结束程序): ").strip('"')
+        
+        # 检查是否是退出命令
+        if input_video.lower() in ['exit', 'quit', '退出']:
+            print("程序已退出")
+            break
+        
+        # 检查是否是清理命令
+        if input_video.lower() in ['clean', '清理']:
+            clean_processed_audio()
+            continue
         
         if not os.path.isfile(input_video):
             print("无效的文件路径")
@@ -146,14 +239,24 @@ while True:
             # shutil.move(os.path.join(video_dir, video_name), os.path.join(old_video_dir, video_name))
             # 清理旧MP4文件
             try:
+                processed_video_count = 0
+                if any(f.endswith('.mp4') for f in os.listdir(video_dir)):
+                    print("开始清理视频文件...")
+                
                 for mp4 in os.listdir(video_dir):
                     if mp4.endswith('.mp4'):
                         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-                        new_name = f"{os.path.splitext(mp4)[0]}_{timestamp}.mp4"
+                        # 清理文件名中的时间戳
+                        clean_name = remove_timestamp(mp4)
+                        new_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}.mp4"
                         shutil.move(os.path.join(video_dir, mp4), 
                         os.path.join(old_video_dir, new_name))
+                        processed_video_count += 1
+                
+                if processed_video_count > 0:
+                    print(f"已清理 {processed_video_count} 个视频文件")
             except Exception as e:
-                print(f"清理旧mp4文件时出错: {str(e)}")
+                print("清理视频文件时出错")
 
             # 记录目录路径
             log_entry = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | 作者: {TPE1_name} | 专辑: {TALB_name} | 音乐文件: {final_name} | 视频文件: {new_name} -> {old_video_dir}\n"
