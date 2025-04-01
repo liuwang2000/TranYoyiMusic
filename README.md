@@ -51,7 +51,7 @@ TranYoyiMusic 是一款专为音乐学习与整理设计的工具，可以轻松
 - **自动安装**：双击运行 `install_ffmpeg.bat` 即可完成安装
   - 脚本会自动从GitHub下载FFmpeg并解压到项目目录中
   - 解压完成后即可使用，无需额外配置环境变量
-  - ⚠️ 需下载约**88MB**文件，建议使用稳定网络
+  - ⚠️ 需下载约**92MB**文件，建议使用稳定网络
   - 🌐 从GitHub下载可能需要科学上网，如遇问题请使用手动安装方式
   - 📥 备用下载地址：[备份](https://github.com/liuwang2000/TranYoyiMusic/releases/download/v1.4/ffmpeg-2025-03-24-git-cbbc927a67-essentials_build.zip)
 
@@ -178,7 +178,7 @@ TranYoyiMusic/
 - 改进异常处理，提高程序稳定性
 
 ### v1.3.0
-- 更换使用体积更小的FFmpeg essentials版本(88MB)，减少下载流量
+- 更换使用体积更小的FFmpeg essentials版本(92MB)，减少下载流量
 - 优化批处理文件中文显示问题
 
 ### v1.2.0

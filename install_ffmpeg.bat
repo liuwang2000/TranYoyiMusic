@@ -5,7 +5,7 @@ echo ========================================================
 echo                FFmpeg 自动安装程序
 echo ========================================================
 echo ' 提示:'
-echo ' - 将下载约88MB的文件，请确保网络畅通'
+echo ' - 将下载约92MB的文件，请确保网络畅通'
 echo ' - 下载可能需要科学上网，如遇下载失败请尝试使用备用地址'
 echo ' - 主要下载链接:'
 echo   https://github.com/GyanD/codexffmpeg/releases/download/2025-03-24-git-cbbc927a67/ffmpeg-2025-03-24-git-cbbc927a67-essentials_build.zip
