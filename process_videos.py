@@ -336,11 +336,11 @@ while True:
             print("日期格式不正确，请重新输入")
 
         # 生成最终文件名，包含额外文本
-        if extra_text:
-            # 如果有额外文本，加入括号中
+        if extra_text and extra_text.strip() != "..":
+            # 如果有额外文本且不是".."，加入括号中
             final_name = f"{TIT2_name}（{extra_text} {formatted_date}）.mp3"
         else:
-            # 没有额外文本，使用原始格式
+            # 没有额外文本或文本为".."，使用原始格式
             final_name = f"{TIT2_name}（{formatted_date}）.mp3"
 
         # 提取音频
