@@ -270,6 +270,17 @@ def clean_processed_videos():
     except Exception as e:
         print(f"清理视频文件时出错: {str(e)}")
 
+# 添加这个新函数来清理文件名中的非法字符
+def clean_filename(filename):
+    """移除文件名中的非法字符，替换为&"""
+    # Windows文件名不允许的字符: < > : " / \ | ? *
+    invalid_chars = '<>:"/\\|?*'
+    for char in invalid_chars:
+        filename = filename.replace(char, '&')
+    # 额外移除文件名中的 ".."
+    filename = filename.replace('..', '')
+    return filename
+
 while True:
     try:
         # 获取视频文件路径
@@ -321,7 +332,7 @@ while True:
             if date_result:
                 # 有有效日期，保存当前输入的日期作为下次默认值
                 formatted_date = date_result
-                extra_text = text_part
+                extra_text = clean_filename(text_part)  # 清理额外文本中的非法字符和".."
                 last_input_date = input_date
                 break
             elif text_part and last_input_date:
@@ -329,18 +340,18 @@ while True:
                 last_date_result, last_text = validate_date(last_input_date)
                 if last_date_result:
                     formatted_date = last_date_result
-                    extra_text = text_part
-                    print(f"使用上次日期并添加文本: {text_part} {last_date_result}")
+                    extra_text = clean_filename(text_part)  # 清理文本中的非法字符和".."
+                    print(f"使用上次日期并添加文本: {extra_text} {last_date_result}")
                     break
             
             print("日期格式不正确，请重新输入")
 
         # 生成最终文件名，包含额外文本
-        if extra_text and extra_text.strip() != "..":
-            # 如果有额外文本且不是".."，加入括号中
+        if extra_text:
+            # 如果有额外文本，加入括号中
             final_name = f"{TIT2_name}（{extra_text} {formatted_date}）.mp3"
         else:
-            # 没有额外文本或文本为".."，使用原始格式
+            # 没有额外文本，使用原始格式
             final_name = f"{TIT2_name}（{formatted_date}）.mp3"
 
         # 提取音频
