@@ -333,16 +333,16 @@ while True:
                 # 有有效日期，保存当前输入的日期作为下次默认值
                 formatted_date = date_result
                 extra_text = clean_filename(text_part)  # 清理额外文本中的非法字符和".."
-                last_input_date = input_date
+                # 仅保存格式化后的日期，不包含额外文本
+                last_input_date = formatted_date
                 break
             elif text_part and last_input_date:
                 # 只有文本没有日期，但有上次日期，使用上次日期并将文本放在前面
-                last_date_result, last_text = validate_date(last_input_date)
-                if last_date_result:
-                    formatted_date = last_date_result
-                    extra_text = clean_filename(text_part)  # 清理文本中的非法字符和".."
-                    print(f"使用上次日期并添加文本: {extra_text} {last_date_result}")
-                    break
+                # last_input_date应该已经是纯日期格式，不需要再次验证
+                formatted_date = last_input_date
+                extra_text = clean_filename(text_part)  # 清理文本中的非法字符和".."
+                print(f"使用上次日期并添加文本: {extra_text} {formatted_date}")
+                break
             
             print("日期格式不正确，请重新输入")
 
