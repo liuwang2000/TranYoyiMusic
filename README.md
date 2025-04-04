@@ -4,7 +4,7 @@
 
 <img src="https://github.com/liuwang2000/TranYoyiMusic/blob/main/Yoyi.png" alt="Yoyi" width="180"/>
 
-![版本](https://img.shields.io/badge/版本-1.5.2-blue)
+![版本](https://img.shields.io/badge/版本-1.5.3-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 
@@ -106,6 +106,7 @@ TranYoyiMusic 是一款专为音乐学习与整理设计的工具，可以轻松
    - 如只输入文本无日期，会使用上次输入的日期并添加文本
    - 自动处理文件名中的特殊字符和".."，确保生成有效文件名
    - 系统只记忆纯日期部分，不会记住额外文本，避免文本累积
+   - 智能识别常见日期格式并正确提取相关文本内容
 4. **⏱️ 剪辑时间**：
    - 支持秒数（如：120）或分:秒格式（如：2:30）
    - 输入0表示不剪切该端点
@@ -174,6 +175,12 @@ TranYoyiMusic/
 - 所有操作都会记录在日志文件中
 
 ## 📝 更新日志
+
+### v1.5.3
+- 改进日期格式识别功能，支持多种日期格式的智能识别
+- 优化文本提取逻辑，准确分离日期和额外描述文本
+- 修复包含连字符的日期格式导致文件名出现多余符号的问题
+- 提高不同日期输入格式的处理一致性
 
 ### v1.5.2
 - 优化日期记忆功能，仅记忆纯日期部分而不包含文本备注

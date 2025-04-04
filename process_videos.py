@@ -106,13 +106,37 @@ def validate_date(input_date):
         except ValueError:
             return None, ""
     
-    # 尝试从非数字字符中提取日期
+    # 尝试从日期格式字符串中提取日期（如2024-09-13或2024.09.13）
+    date_pattern = r'(\d{4})[-./年](\d{1,2})[-./月](\d{1,2})'
+    date_match = re.search(date_pattern, input_date)
+    if date_match:
+        try:
+            year = date_match.group(1)
+            month = date_match.group(2).zfill(2)  # 确保月份是两位数
+            day = date_match.group(3).zfill(2)    # 确保日期是两位数
+            formatted_date = f"{year}{month}{day}"
+            
+            # 移除整个日期部分，保留其余文本作为额外文本
+            full_date_str = date_match.group(0)  # 完整匹配的日期字符串
+            extra_text = input_date.replace(full_date_str, "").strip()
+            
+            # 验证日期格式
+            datetime.strptime(formatted_date, '%Y%m%d')
+            return formatted_date, extra_text
+        except (ValueError, IndexError):
+            pass
+    
+    # 尝试从纯数字中提取日期
     cleaned = re.sub(r'\D', '', input_date)
     if len(cleaned) == 8:
         try:
             datetime.strptime(cleaned, '%Y%m%d')
-            # 计算额外文本（去除数字后的内容）
-            extra_text = re.sub(r'\d', '', input_date).strip()
+            # 这里我们可能无法准确提取文本部分，因为无法确定哪些数字是日期的一部分
+            # 尝试使用更智能的方法：寻找连续8位数字并移除
+            date_pattern = r'\d{8}'
+            extra_text = re.sub(date_pattern, '', input_date).strip()
+            # 清理多余的分隔符
+            extra_text = re.sub(r'[-_.,;:\s]+', ' ', extra_text).strip()
             return cleaned, extra_text
         except ValueError:
             pass
