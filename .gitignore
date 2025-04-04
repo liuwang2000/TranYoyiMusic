@@ -46,3 +46,4 @@ ffmpeg*
 directory.log
 director*
 *.log
+config.ini

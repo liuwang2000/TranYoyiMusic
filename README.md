@@ -4,7 +4,7 @@
 
 <img src="https://github.com/liuwang2000/TranYoyiMusic/blob/main/Yoyi.png" alt="Yoyi" width="180"/>
 
-![版本](https://img.shields.io/badge/版本-1.5.3-blue)
+![版本](https://img.shields.io/badge/版本-1.5.4-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 
@@ -132,8 +132,41 @@ TranYoyiMusic/
 ├── starTran.bat       # 启动视频处理脚本
 ├── starTrim.bat       # 启动音频剪辑脚本
 ├── install_ffmpeg.bat # FFmpeg安装脚本
+├── .gitignore         # Git忽略文件配置
 └── config.ini         # 配置文件（存储作者、专辑信息）
 ```
+
+## 🔄 版本控制与开发
+
+### 使用Git进行版本控制
+如果您计划对代码进行修改或希望跟踪变更，推荐使用Git进行版本控制：
+
+1. **初始化Git仓库**（如果尚未初始化）:
+   ```bash
+   git init
+   ```
+
+2. **配置.gitignore文件**：
+   项目已包含基本的.gitignore文件，用于排除以下内容：
+   - FFmpeg相关文件和目录
+   - 日志文件（directory.log）
+   - 临时文件和个人配置
+
+3. **如果日志文件已被跟踪**，可使用以下命令取消跟踪：
+   ```bash
+   git rm --cached directory.log
+   ```
+
+4. **提交您的更改**:
+   ```bash
+   git add .
+   git commit -m "描述您的更改"
+   ```
+
+### 日志文件管理
+- 日志文件会随着使用不断增长，建议定期备份并清空
+- 对于长期使用，可考虑实现日志轮换功能
+- 如使用Git，确保日志文件已在.gitignore中正确配置
 
 ## ❓ 常见问题与解决方案
 
@@ -175,6 +208,11 @@ TranYoyiMusic/
 - 所有操作都会记录在日志文件中
 
 ## 📝 更新日志
+
+### v1.5.4
+- 添加Git版本控制说明，帮助开发者更好地管理代码
+- 优化.gitignore配置，正确排除日志和临时文件
+- 改进文档结构，增加日志文件管理指南
 
 ### v1.5.3
 - 改进日期格式识别功能，支持多种日期格式的智能识别
