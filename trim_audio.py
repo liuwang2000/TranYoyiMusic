@@ -81,7 +81,8 @@ if __name__ == '__main__':
         # 生成备份文件名
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
         original_name = os.path.basename(input_mp3)
-        backup_name = f"{os.path.splitext(original_name)[0]}_原始_{timestamp}.mp3"
+        file_ext = os.path.splitext(original_name)[1]  # 获取原始文件的扩展名
+        backup_name = f"{os.path.splitext(original_name)[0]}_原始_{timestamp}{file_ext}"
         
         # 移动原文件到备份目录
         # 确保备份目录存在

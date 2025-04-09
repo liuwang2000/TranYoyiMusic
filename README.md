@@ -4,7 +4,7 @@
 
 <img src="https://github.com/liuwang2000/TranYoyiMusic/blob/main/Yoyi.png" alt="Yoyi" width="180"/>
 
-![版本](https://img.shields.io/badge/版本-1.5.4-blue)
+![版本](https://img.shields.io/badge/版本-1.5.5-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 
@@ -96,7 +96,7 @@ TranYoyiMusic 是一款专为音乐学习与整理设计的工具，可以轻松
 
 ### 📋 输入规范
 
-1. **📹 视频文件**：支持MP4、AVI、MOV等常见格式
+1. **📹 视频文件**：支持MP4、AVI、MOV等常见格式（支持大小写扩展名）
 2. **🎵 音乐命名**：支持中英文混合，如"月光奏鸣曲"或"Moonlight_Sonata"
 3. **📅 日期格式**：
    - 支持格式：2024.03.27、2024-03-27、2024年3月27日等
@@ -208,6 +208,12 @@ TranYoyiMusic/
 - 所有操作都会记录在日志文件中
 
 ## 📝 更新日志
+
+### v1.5.5
+- 优化文件处理逻辑，支持大小写文件扩展名（如.MP3、.MP4）
+- 保留原始文件扩展名格式，提高文件处理的一致性
+- 扩展支持的音频格式，包括MP3、WAV、FLAC、AAC、OGG和M4A
+- 完善清理功能，确保所有音频和视频文件都能被正确处理
 
 ### v1.5.4
 - 添加Git版本控制说明，帮助开发者更好地管理代码

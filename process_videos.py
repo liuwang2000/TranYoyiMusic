@@ -40,7 +40,8 @@ def remove_timestamp(filename):
 # 清理旧MP3文件
 try:
     mp3_count = 0
-    mp3_files = [f for f in os.listdir(music_dir) if f.endswith('.mp3')]
+    audio_extensions = ['.mp3']
+    mp3_files = [f for f in os.listdir(music_dir) if any(f.lower().endswith(ext) for ext in audio_extensions)]
     
     if mp3_files:
         print("初始化: 正在清理音乐目录...")
@@ -48,8 +49,8 @@ try:
     for mp3 in mp3_files:
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
         clean_name = remove_timestamp(mp3)
-        # 创建一个以清理后的文件名为基础的备份名
-        backup_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}.mp3"
+        # 创建一个以清理后的文件名为基础的备份名，保留原始扩展名
+        backup_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}{os.path.splitext(mp3)[1]}"
         shutil.move(os.path.join(music_dir, mp3), 
         os.path.join(old_music_dir, backup_name))
         mp3_count += 1
@@ -57,7 +58,7 @@ try:
     if mp3_count > 0:
         print(f"已清理 {mp3_count} 个音频文件")
 except Exception as e:
-    print("清理音频文件时出错")
+    print(f"清理音频文件时出错: {str(e)}")
 
 # 检查FFmpeg可用性
 ffmpeg_path = None
@@ -172,8 +173,10 @@ def clean_processed_audio():
         
         # 先获取所有需要处理的文件列表
         files_to_process = []
+        # 扩展支持的音频格式列表
+        audio_extensions = ['.mp3', '.wav', '.flac', '.aac', '.ogg', '.m4a']
         for audio in os.listdir(music_dir):
-            if audio.endswith('.mp3') and not audio.startswith('temp_'):
+            if any(audio.lower().endswith(ext) for ext in audio_extensions) and not audio.startswith('temp_'):
                 files_to_process.append(audio)
         
         # 如果没有文件需要处理，直接返回
@@ -194,7 +197,7 @@ def clean_processed_audio():
                 # 清理文件名中的时间戳
                 clean_name = remove_timestamp(audio)
                 timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-                new_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}.mp3"
+                new_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}{os.path.splitext(audio)[1]}"
                 dest_path = os.path.join(old_music_dir, new_name)
                 
                 # 移动文件但不输出详细信息
