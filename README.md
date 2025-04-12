@@ -4,7 +4,7 @@
 
 <img src="https://github.com/liuwang2000/TranYoyiMusic/blob/main/Yoyi.png" alt="Yoyi" width="180"/>
 
-![版本](https://img.shields.io/badge/版本-1.5.5-blue)
+![版本](https://img.shields.io/badge/版本-1.5.6-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 
@@ -97,7 +97,10 @@ TranYoyiMusic 是一款专为音乐学习与整理设计的工具，可以轻松
 ### 📋 输入规范
 
 1. **📹 视频文件**：支持MP4、AVI、MOV等常见格式（支持大小写扩展名）
-2. **🎵 音乐命名**：支持中英文混合，如"月光奏鸣曲"或"Moonlight_Sonata"
+2. **🎵 音乐命名**：
+   - 支持中英文混合，如"月光奏鸣曲"或"Moonlight_Sonata"
+   - 自动处理非法字符：< > : " / \ | ? * 将被替换为 &
+   - 避免使用Windows不支持的特殊符号，确保文件名有效
 3. **📅 日期格式**：
    - 支持格式：2024.03.27、2024-03-27、2024年3月27日等
    - 系统自动标准化为8位数字（例：20240327）
@@ -208,6 +211,11 @@ TranYoyiMusic/
 - 所有操作都会记录在日志文件中
 
 ## 📝 更新日志
+
+### v1.5.6
+- 修复音乐名称中包含非法字符导致程序闪退的问题
+- 自动将音乐名称中的非法字符（< > : " / \ | ? *）替换为&符号
+- 增强程序稳定性，防止文件名非法字符导致的错误
 
 ### v1.5.5
 - 优化文件处理逻辑，支持大小写文件扩展名（如.MP3、.MP4）

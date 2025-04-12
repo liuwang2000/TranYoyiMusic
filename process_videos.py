@@ -341,6 +341,8 @@ while True:
 
         # 获取音乐信息
         TIT2_name = input("输入音乐名称（中文/英文）: ").strip()
+        # 清理音乐名称中的非法字符
+        TIT2_name = clean_filename(TIT2_name)
         while True:
             date_prompt = f"输入时间（格式示例：2024.03.27或2024-03-27）[上次：{last_input_date if last_input_date else '无'}]: "
             input_date = input(date_prompt).strip()
