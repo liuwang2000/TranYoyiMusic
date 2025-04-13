@@ -336,9 +336,8 @@ while True:
         # 移动视频到视频目录
         video_name = os.path.basename(input_video)
         if is_mp3:
-            # 如果是MP3文件，复制到音乐目录
-            shutil.copy(input_video, os.path.join(music_dir, video_name))
-            input_audio = os.path.join(music_dir, video_name)
+            # 如果是MP3文件，直接使用原始文件路径
+            input_audio = input_video
         else:
             # 如果是视频文件，移动到视频目录
             shutil.move(input_video, os.path.join(video_dir, video_name))
@@ -412,11 +411,37 @@ while True:
                 ]
                 subprocess.run(ffmpeg_cmd, check=True)
                 # 删除原始复制的MP3文件
-                os.remove(input_audio)
+                #os.remove(input_audio)
+                
+                # 归档原始MP3文件到old_music_dir
+                original_mp3_name = os.path.basename(input_video)
+                timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+                clean_name = remove_timestamp(original_mp3_name)
+                archive_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}{os.path.splitext(original_mp3_name)[1]}"
+                archive_path = os.path.join(old_music_dir, archive_name)
+                
+                print(f"正在归档原始MP3文件: {original_mp3_name}")
+                shutil.move(input_video, archive_path)
+                print(f"MP3文件已移至: {os.path.relpath(archive_path)}")
+                
             except Exception as e:
                 print(f"处理MP3元数据失败: {str(e)}")
                 # 如果处理失败，至少重命名文件
                 shutil.move(input_audio, final_path)
+                
+                # 尝试归档原始MP3文件
+                try:
+                    original_mp3_name = os.path.basename(input_video)
+                    timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+                    clean_name = remove_timestamp(original_mp3_name)
+                    archive_name = f"{os.path.splitext(clean_name)[0]}_{timestamp}{os.path.splitext(original_mp3_name)[1]}"
+                    archive_path = os.path.join(old_music_dir, archive_name)
+                    
+                    print(f"正在归档原始MP3文件: {original_mp3_name}")
+                    shutil.move(input_video, archive_path)
+                    print(f"MP3文件已移至: {os.path.relpath(archive_path)}")
+                except Exception as move_error:
+                    print(f"归档原始MP3文件失败: {str(move_error)}")
         else:
             # 提取音频
             ffmpeg_cmd = [
@@ -470,7 +495,12 @@ while True:
                 new_name = video_name  # 如果移动失败，使用原始名称
 
             # 记录目录路径
-            log_entry = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | 作者: {TPE1_name} | 专辑: {TALB_name} | 音乐文件: {final_name} | 视频文件: {new_name} -> {old_video_dir}\n"
+            if is_mp3:
+                # 如果是MP3文件，记录MP3归档信息
+                log_entry = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | 作者: {TPE1_name} | 专辑: {TALB_name} | 音乐文件: {final_name} | 原始MP3: {archive_name} -> {old_music_dir}\n"
+            else:
+                # 如果是视频文件，记录视频归档信息
+                log_entry = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | 作者: {TPE1_name} | 专辑: {TALB_name} | 音乐文件: {final_name} | 视频文件: {new_name} -> {old_video_dir}\n"
         except Exception as move_error:
             print(f"文件移动失败: {str(move_error)}")
             exit(1)
