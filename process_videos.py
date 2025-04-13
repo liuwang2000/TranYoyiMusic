@@ -330,10 +330,19 @@ while True:
             print("无效的文件路径")
             continue
             
+        # 检查文件是否为MP3格式
+        is_mp3 = os.path.splitext(input_video.lower())[1] == '.mp3'
+        
         # 移动视频到视频目录
         video_name = os.path.basename(input_video)
-        shutil.move(input_video, os.path.join(video_dir, video_name))
-        input_video = os.path.join(video_dir, video_name)
+        if is_mp3:
+            # 如果是MP3文件，复制到音乐目录
+            shutil.copy(input_video, os.path.join(music_dir, video_name))
+            input_audio = os.path.join(music_dir, video_name)
+        else:
+            # 如果是视频文件，移动到视频目录
+            shutil.move(input_video, os.path.join(video_dir, video_name))
+            input_video = os.path.join(video_dir, video_name)
 
         # 生成临时MP3路径
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
@@ -383,27 +392,53 @@ while True:
             # 没有额外文本，使用原始格式
             final_name = f"{TIT2_name}（{formatted_date}）.mp3"
 
-        # 提取音频
-        ffmpeg_cmd = [
-            'ffmpeg',
-            '-i', input_video,
-            '-vn',
-            '-acodec', 'libmp3lame',
-            '-q:a', '2',
-            '-map_metadata', '-1',
-            '-metadata', f'TPE1={TPE1_name}',
-            '-metadata', f'TALB={TALB_name}',
-            '-metadata', f'TIT2={TIT2_name}',
-            '-metadata', f'date={formatted_date}',
-            '-id3v2_version', '3',
-            temp_mp3
-        ]
-       
+        # 根据文件类型处理
+        if is_mp3:
+            # 如果是MP3文件，直接重命名
+            final_path = os.path.join(music_dir, final_name)
+            # 添加MP3元数据
+            try:
+                ffmpeg_cmd = [
+                    'ffmpeg',
+                    '-i', input_audio,
+                    '-c', 'copy',
+                    '-map_metadata', '-1',
+                    '-metadata', f'TPE1={TPE1_name}',
+                    '-metadata', f'TALB={TALB_name}',
+                    '-metadata', f'TIT2={TIT2_name}',
+                    '-metadata', f'date={formatted_date}',
+                    '-id3v2_version', '3',
+                    temp_mp3
+                ]
+                subprocess.run(ffmpeg_cmd, check=True)
+                # 删除原始复制的MP3文件
+                os.remove(input_audio)
+            except Exception as e:
+                print(f"处理MP3元数据失败: {str(e)}")
+                # 如果处理失败，至少重命名文件
+                shutil.move(input_audio, final_path)
+        else:
+            # 提取音频
+            ffmpeg_cmd = [
+                'ffmpeg',
+                '-i', input_video,
+                '-vn',
+                '-acodec', 'libmp3lame',
+                '-q:a', '2',
+                '-map_metadata', '-1',
+                '-metadata', f'TPE1={TPE1_name}',
+                '-metadata', f'TALB={TALB_name}',
+                '-metadata', f'TIT2={TIT2_name}',
+                '-metadata', f'date={formatted_date}',
+                '-id3v2_version', '3',
+                temp_mp3
+            ]
+            subprocess.run(ffmpeg_cmd, check=True)
             
-        subprocess.run(ffmpeg_cmd, check=True)
-        # 生成最终文件名
-        final_path = os.path.join(music_dir, final_name)
-        
+        # 生成最终文件路径
+        if not is_mp3:
+            final_path = os.path.join(music_dir, final_name)
+
         # 移动文件并记录日志
         try:
             shutil.move(temp_mp3, final_path)
@@ -411,7 +446,7 @@ while True:
             # 清理当前处理过的视频文件
             try:
                 # 只处理当前视频文件，而不是所有视频文件
-                if os.path.exists(os.path.join(video_dir, video_name)):
+                if not is_mp3 and os.path.exists(os.path.join(video_dir, video_name)):
                     timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
                     # 清理文件名中的时间戳
                     clean_name = remove_timestamp(video_name)
