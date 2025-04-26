@@ -333,15 +333,30 @@ while True:
         # 检查文件是否为MP3格式
         is_mp3 = os.path.splitext(input_video.lower())[1] == '.mp3'
         
+        # 获取并清理文件名中的非法字符
+        file_dir = os.path.dirname(input_video)
+        file_name = os.path.basename(input_video)
+        clean_file_name = clean_filename(file_name)
+        
         # 移动视频到视频目录
-        video_name = os.path.basename(input_video)
+        video_name = clean_file_name  # 使用清理后的文件名
         if is_mp3:
             # 如果是MP3文件，直接使用原始文件路径
             input_audio = input_video
         else:
-            # 如果是视频文件，移动到视频目录
-            shutil.move(input_video, os.path.join(video_dir, video_name))
-            input_video = os.path.join(video_dir, video_name)
+            # 如果是视频文件，移动到视频目录，使用清理后的文件名
+            try:
+                # 如果原文件名包含非法字符，先在原位置重命名
+                if file_name != clean_file_name:
+                    clean_path = os.path.join(file_dir, clean_file_name)
+                    shutil.move(input_video, clean_path)
+                    input_video = clean_path
+                # 然后移动到视频目录
+                shutil.move(input_video, os.path.join(video_dir, video_name))
+                input_video = os.path.join(video_dir, video_name)
+            except Exception as e:
+                print(f"移动文件失败: {str(e)}")
+                continue
 
         # 生成临时MP3路径
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')

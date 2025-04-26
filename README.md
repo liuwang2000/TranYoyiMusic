@@ -4,7 +4,7 @@
 
 <img src="https://github.com/liuwang2000/TranYoyiMusic/blob/main/Yoyi.png" alt="Yoyi" width="180"/>
 
-![版本](https://img.shields.io/badge/版本-1.5.10-blue)
+![版本](https://img.shields.io/badge/版本-1.5.11-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 
@@ -223,6 +223,12 @@ TranYoyiMusic/
 - 避免处理已有时间戳的MP3文件，可能导致重复处理
 
 ## 📝 更新日志
+
+### v1.5.11
+- 修复输入文件名包含非法字符时程序闪退的问题
+- 自动清理输入文件路径中的非法字符，确保文件处理顺利进行
+- 优化文件处理流程，增强程序稳定性
+- 提高对各类文件名的兼容性和容错能力
 
 ### v1.5.10
 - 修复MP3处理过程中"系统找不到指定的文件"错误
