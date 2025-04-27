@@ -1,0 +1,110 @@
+
+--- 开始于 2025-04-27 21:14:21 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+
+完成扫描! 耗时: 0.01秒
+总计: 重命名 0 个文件
+--- 结束于 2025-04-27 21:14:21 ---
+
+--- 开始于 2025-04-27 21:14:29 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+
+完成扫描! 耗时: 0.00秒
+总计: 重命名 0 个文件
+--- 结束于 2025-04-27 21:14:29 ---
+
+--- 开始于 2025-04-27 21:28:37 ---
+扫描目录: F:\Yoyi\TranMusic
+重命名: '.\.gitignore' -> '.\gitignore'
+
+完成扫描! 耗时: 0.00秒
+总计: 重命名 1 个文件
+--- 结束于 2025-04-27 21:28:37 ---
+
+--- 开始于 2025-04-27 21:35:07 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【2025虚拟UP新春会_四禧丸子】拜年纪经典《四喜东家》Remix版💃🎵.28356444292.2025-04-02_12_15_14.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【2025虚拟UP新春会_四禧丸子】拜年纪经典《四喜东家》Remix版__.28356444292.2025-04-02_12_15_14.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【冰火歌会】谁也不能欺负我们四个!!国风唱跳《免我蹉跎苦》🙏🏻🙏🏻.28089255888.2025-03-31_11_04_28.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【冰火歌会】谁也不能欺负我们四个!!国风唱跳《免我蹉跎苦》____.28089255888.2025-03-31_11_04_28.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】嘴硬自己没唱过《血腥爱情故事》VCR都端上来还死不认账,小猴满口谎言真的是😅任何谎言终将绳之以法😡.29142224175.2025-03-30_13_09_39.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】嘴硬自己没唱过《血腥爱情故事》VCR都端上来还死不认账,小猴满口谎言真的是_任何谎言终将绳之以法_.29142224175.2025-03-30_13_09_39.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】来张开小嘴吐个烟圈😤这首《烟店的监守自盗》才是原唱!这才是音乐🤯.28845212411.2025-03-26_12_21_50.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】来张开小嘴吐个烟圈_这首《烟店的监守自盗》才是原唱!这才是音乐🤯.28845212411.2025-03-26_12_21_50.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】自觉唱了两首符合身份狗狗歌🐶《小狗乖乖》《我是你的小狗》🐶.29302983677.2025-04-08_20_49_18.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】自觉唱了两首符合身份狗狗歌_《小狗乖乖》《我是你的小狗》_.29302983677.2025-04-08_20_49_18.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】这是能出现在直播间的节目吗_这《夜蝶》对吗_这不对吧!😰.28128839439.2025-03-30_22_07_29.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】这是能出现在直播间的节目吗_这《夜蝶》对吗_这不对吧!_.28128839439.2025-03-30_22_07_29.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】黑屁梨安就唱这首《亲亲猪猪宝贝》是吧_纯纯的打情骂俏🙊❤🐷.1624913883.2025-04-08_11_39_50.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】黑屁梨安就唱这首《亲亲猪猪宝贝》是吧_纯纯的打情骂俏_❤_.1624913883.2025-04-08_11_39_50.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】2025.02.18情人节💗清唱合集_心愿便利贴、月夜、恋爱频率、亲亲、123木头人、长腿叔叔、苦茶、专属天使、再次重逢的世界.心愿便利贴.28461565671.2025-03-27_22_36_00.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】2025.02.18情人节_清唱合集_心愿便利贴、月夜、恋爱频率、亲亲、123木头人、长腿叔叔、苦茶、专属天使、再次重逢的世界.心愿便利贴.28461565671.2025-03-27_22_36_00.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】p😭q《和你》cover余佳运.500001657409009.2025-04-05_13_38_11.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】p_q《和你》cover余佳运.500001657409009.2025-04-05_13_38_11.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】p😭q《天黑黑》cover孙燕姿.1633834972.2025-04-07_12_01_30.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】p_q《天黑黑》cover孙燕姿.1633834972.2025-04-07_12_01_30.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《夏夜最后的烟火》送给最最最好的酥酥又们p😭q.1363278620.2025-04-27_20_52_17.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《夏夜最后的烟火》送给最最最好的酥酥又们p_q.1363278620.2025-04-27_20_52_17.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《夏夜最后的烟火》送给最最最好的酥酥又们p😭q.1363278620.2025-04-27_20_52_17_upscayl_4x_digital-art-4x.png' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《夏夜最后的烟火》送给最最最好的酥酥又们p_q.1363278620.2025-04-27_20_52_17_upscayl_4x_digital-art-4x.png'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《小镇姑娘》(南宁版)陪伴我度过了准备生日会的这段时间_很符合我对又神的想象😅_cover陶喆.1474092921.2025-04-20_16_38_50.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《小镇姑娘》(南宁版)陪伴我度过了准备生日会的这段时间_很符合我对又神的想象__cover陶喆.1474092921.2025-04-20_16_38_50.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《自由飞翔》再次上路喽😇cover凤凰传奇.1588059715.2025-04-12_11_10_49.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《自由飞翔》再次上路喽_cover凤凰传奇.1588059715.2025-04-12_11_10_49.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】依旧是努力证明《Chase_The_Moon》自己是原唱的一天😄2024.07.23.1624808536.2025-04-08_11_55_41.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】依旧是努力证明《Chase_The_Moon》自己是原唱的一天_2024.07.23.1624808536.2025-04-08_11_55_41.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】去掉SC纯享版《情歌王》(KTV金曲太经典了🎵)cover_古巨基.500001661363288.2025-04-05_13_23_50.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】去掉SC纯享版《情歌王》(KTV金曲太经典了_)cover_古巨基.500001661363288.2025-04-05_13_23_50.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】又到了反复百舰的时刻了😄百舰战歌《坏姐姐》2024.08.04.1638140039.2025-04-07_11_37_26.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】又到了反复百舰的时刻了_百舰战歌《坏姐姐》2024.08.04.1638140039.2025-04-07_11_37_26.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】又讨到百舰战歌了!但是前半朗诵😅《坏姐姐》cover王蓉_2024.09.28.26047941718.2025-04-04_11_24_56.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】又讨到百舰战歌了!但是前半朗诵_《坏姐姐》cover王蓉_2024.09.28.26047941718.2025-04-04_11_24_56.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】小又归来首唱😅《天冷了你要记得穿秋裤》cover米三岁.27847230031.2025-04-01_12_00_49.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】小又归来首唱_《天冷了你要记得穿秋裤》cover米三岁.27847230031.2025-04-01_12_00_49.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】时隔13个月再唱《老公赚钱老婆花》cover大庆小芳(听多少遍还是难绷😅.25888229677.2025-04-04_11_28_51.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】时隔13个月再唱《老公赚钱老婆花》cover大庆小芳(听多少遍还是难绷_.25888229677.2025-04-04_11_28_51.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】这才是音乐.jpg😭《蝇》cover_许哲珮_2024.09.10.25814371681.2025-04-04_12_20_32.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】这才是音乐.jpg_《蝇》cover_许哲珮_2024.09.10.25814371681.2025-04-04_12_20_32.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一生日会】情到深处即兴清唱一首《喜欢你》p😭q_cover陈洁仪.1473191874.2025-04-20_16_46_04.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一生日会】情到深处即兴清唱一首《喜欢你》p_q_cover陈洁仪.1473191874.2025-04-20_16_46_04.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】come_on!《逆战》逆战来耶!王牌要狂野😎_cover张杰.1636232188.2025-04-07_11_53_33.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】come_on!《逆战》逆战来耶!王牌要狂野__cover张杰.1636232188.2025-04-07_11_53_33.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】《三寸天堂》p😭q太痛了_cover_严艺丹.1574588663.2025-04-14_12_32_41.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】《三寸天堂》p_q太痛了_cover_严艺丹.1574588663.2025-04-14_12_32_41.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】《最美的太阳》好有年代感的选曲😭爷青回😭cover张杰.1484144914.2025-04-20_16_05_43.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】《最美的太阳》好有年代感的选曲_爷青回_cover张杰.1484144914.2025-04-20_16_05_43.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】《洗澡歌》噜啦啦噜啦啦噜啦噜啦嘞~儿童节就得是这种节目😄.1567921946.2025-04-15_10_48_34.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】《洗澡歌》噜啦啦噜啦啦噜啦噜啦嘞~儿童节就得是这种节目_.1567921946.2025-04-15_10_48_34.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】家喻户晓的《自由飞翔》潮完了💃cover凤凰传奇.500001659889832.2025-04-05_13_33_25.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【四禧丸子_合唱】家喻户晓的《自由飞翔》潮完了_cover凤凰传奇.500001659889832.2025-04-05_13_33_25.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-【翻唱】客官不可以💕你靠得越来越近.1057100919.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-【翻唱】客官不可以_你靠得越来越近.1057100919.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-当经典告白歌《天天》配上走马灯画面🎧😭【又一翻唱】.1478293914.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-当经典告白歌《天天》配上走马灯画面__【又一翻唱】.1478293914.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-献给你这枝『恶之花』🌹蛊惑爱我的想法🫰.1572320289.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-献给你这枝『恶之花』_蛊惑爱我的想法🫰.1572320289.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\【又一翻唱】《离人》有人说一次告别👋天上就会有颗星🌟又熄灭.jpg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\【又一翻唱】《离人》有人说一次告别_天上就会有颗星_又熄灭.jpg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\【四禧丸子】而我受过的伤，都是我的『勋章』🎖.jpg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\【四禧丸子】而我受过的伤，都是我的『勋章』_.jpg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\［哈基米］🐱Highscore🐱.jpg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\［哈基米］_Highscore_.jpg'
+
+完成扫描! 耗时: 0.03秒
+总计: 重命名 33 个文件
+--- 结束于 2025-04-27 21:35:07 ---
+
+--- 开始于 2025-04-27 21:37:04 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一&梨安_合唱】《我最喜欢你了》青梅甜甜甜啊啊啊🥰.1579772136.2025-04-13_20_50_09.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一&梨安_合唱】《我最喜欢你了》青梅甜甜甜啊啊啊_.1579772136.2025-04-13_20_50_09.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】又神的第二人格“魅魔姐”献唱《老公天下第一》🥵已经彻底沉沦了🥵沐霂要饱了🥵🥵🥵.1630577619.2025-04-08_10_56_54.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】又神的第二人格“魅魔姐”献唱《老公天下第一》_已经彻底沉沦了_沐霂要饱了___.1630577619.2025-04-08_10_56_54.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】来张开小嘴吐个烟圈_这首《烟店的监守自盗》才是原唱!这才是音乐🤯.28845212411.2025-03-26_12_21_50.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】来张开小嘴吐个烟圈_这首《烟店的监守自盗》才是原唱!这才是音乐_.28845212411.2025-03-26_12_21_50.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】直播复刻“恬豆断气版《大鱼》”漏气学的有九分相似🤣但是缺少了牢豆那股自然感🤭.28406579542.2025-03-28_11_35_34.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】直播复刻“恬豆断气版《大鱼》”漏气学的有九分相似_但是缺少了牢豆那股自然感_.28406579542.2025-03-28_11_35_34.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】黑屁梨安就唱这首《亲亲猪猪宝贝》是吧_纯纯的打情骂俏_❤_.1624913883.2025-04-08_11_39_50.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一】黑屁梨安就唱这首《亲亲猪猪宝贝》是吧_纯纯的打情骂俏___.1624913883.2025-04-08_11_39_50.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《天上掉下个林妹妹》好惊艳的唱腔🤯神中神!!!cover黄诗扶.1481927967.2025-04-20_16_08_12.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《天上掉下个林妹妹》好惊艳的唱腔_神中神!!!cover黄诗扶.1481927967.2025-04-20_16_08_12.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《好想你》好想你~好想你🥰.1383234805.2025-04-27_20_20_23.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《好想你》好想你~好想你_.1383234805.2025-04-27_20_20_23.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《青花瓷》cover周杰伦(片哥真会看时机打广告🤣).27894221888.2025-03-31_22_09_04.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《青花瓷》cover周杰伦(片哥真会看时机打广告_).27894221888.2025-03-31_22_09_04.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】勉强证明《Chase_The_Moon》自己是原唱🤣2024.07.21.1622570979.2025-04-09_09_43_56.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】勉强证明《Chase_The_Moon》自己是原唱_2024.07.21.1622570979.2025-04-09_09_43_56.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】新晋RSQ主播唱热歌《痒》《霓虹甜心》《坏姐姐》🥵.痒.29079962440.2025-03-26_19_43_03.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】新晋RSQ主播唱热歌《痒》《霓虹甜心》《坏姐姐》_.痒.29079962440.2025-03-26_19_43_03.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】时隔许久挑战一下《大地飞歌》🤯🤯🤯.33108470.2025-04-01_14_17_19.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】时隔许久挑战一下《大地飞歌》___.33108470.2025-04-01_14_17_19.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】正经唱一下粤语歌🤪小拉不算拉🤪《一格格》cover卫兰.1646260023.2025-04-06_15_35_35.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】正经唱一下粤语歌_小拉不算拉_《一格格》cover卫兰.1646260023.2025-04-06_15_35_35.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】这下真的唱《爱要坦荡荡》了🤣这就是“恬豆攻击又一”的下场🤭.1183945532.2025-04-09_17_43_49.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】这下真的唱《爱要坦荡荡》了_这就是“恬豆攻击又一”的下场_.1183945532.2025-04-09_17_43_49.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【恬豆&又一_合唱】《稍息立正站好》儿歌好听捏🥰cover_范晓萱.1499639021.2025-04-20_15_57_47.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\screenshot-【恬豆&又一_合唱】《稍息立正站好》儿歌好听捏_cover_范晓萱.1499639021.2025-04-20_15_57_47.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-❤️最强偶像《爱言叶Ⅲ》❤️.988253434.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-_️最强偶像《爱言叶Ⅲ》_️.988253434.jpeg'
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\♪爱让悬崖变平地♪『你是我的风景』【又一充电中】.jpg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\_爱让悬崖变平地_『你是我的风景』【又一充电中】.jpg'
+
+完成扫描! 耗时: 0.02秒
+总计: 重命名 16 个文件
+--- 结束于 2025-04-27 21:37:04 ---
+
+--- 开始于 2025-04-27 21:40:52 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+
+--- 开始于 2025-04-27 21:42:00 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+
+完成扫描! 耗时: 0.00秒
+总计: 重命名 0 个文件
+--- 结束于 2025-04-27 21:42:00 ---
+
+--- 开始于 2025-04-27 21:42:05 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+
+完成扫描! 耗时: 0.00秒
+总计: 重命名 0 个文件
+--- 结束于 2025-04-27 21:42:05 ---
+
+--- 开始于 2025-04-27 21:44:00 ---
+扫描目录: d:\BaiduSyncdisk\AAA_lw\cover
+重命名: 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-献给你这枝『恶之花』_蛊惑爱我的想法🫰.1572320289.jpeg' -> 'd:\BaiduSyncdisk\AAA_lw\cover\videoCover-献给你这枝『恶之花』_蛊惑爱我的想法_.1572320289.jpeg'
+
+完成扫描! 耗时: 0.00秒
+总计: 重命名 1 个文件
+--- 结束于 2025-04-27 21:44:00 ---
