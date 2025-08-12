@@ -4,7 +4,7 @@
 
 <img src="https://github.com/liuwang2000/TranYoyiMusic/blob/main/Yoyi.png" alt="Yoyi" width="180"/>
 
-![版本](https://img.shields.io/badge/版本-1.5.11-blue)
+![版本](https://img.shields.io/badge/版本-1.5.12-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-yellow)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 
