@@ -38,16 +38,30 @@ else:
 # 时间格式验证函数
 def validate_time(input_time):
     # 支持分:秒格式（如2:30）和纯秒数格式
-    pattern = r'^(\d+[:：]\d{1,2}(\.\d+)?|\d+(\.\d+)?)$'
-    return re.match(pattern, input_time) is not None
+    pattern = r'^(\d+[.:]\d{1,2}[.:]\d{1,2}(\.\d{1})?|\d+[.:]\d{1,2}(\.\d{1})?|\d+(\.\d{1})?)$'
+    return re.fullmatch(pattern, input_time) is not None
 
 def convert_to_seconds(time_str):
-    # 将分:秒格式转换为秒数
+    # 将时间格式转换为秒数（支持小时:分钟:秒、分:秒、纯秒数，支持.或:作为分隔符）
+    # 替换中文冒号为英文冒号
     time_str = time_str.replace('：', ':')
-    if ':' in time_str:
-        minutes, seconds = time_str.split(':', 1)
+    
+    # 检查是否为纯秒数带一位小数
+    if re.match(r'^\d+\.\d{1}$', time_str):
+        return float(time_str)
+    
+    # 将分隔符中的点替换为冒号
+    time_str = time_str.replace('.', ':')
+    parts = time_str.split(':')
+    
+    if len(parts) == 3:  # 小时:分钟:秒
+        hours, minutes, seconds = parts
+        return float(hours) * 3600 + float(minutes) * 60 + float(seconds)
+    elif len(parts) == 2:  # 分钟:秒
+        minutes, seconds = parts
         return float(minutes) * 60 + float(seconds)
-    return float(time_str)
+    else:  # 纯秒数
+        return float(time_str)
 
 # 主处理流程
 if __name__ == '__main__':
@@ -61,22 +75,22 @@ if __name__ == '__main__':
 
         # 获取剪辑时间
         while True:
-            start_time = input("请输入起始时间（秒或分:秒格式，0表示不剪切开头）: ").strip()
+            start_time = input("请输入起始时间（格式：秒、分:秒、小时:分钟:秒，支持.作为分隔符（如2.30视为2:30），纯秒数小数点后限一位数字，0表示不剪切开头）: ").strip()
             if validate_time(start_time):
                 # 转换为秒数
                 start_seconds = convert_to_seconds(start_time)
                 if start_seconds >= 0:
                     break
-            print("时间格式错误，示例：3、3.5 或 2:30")
+            print("时间格式错误，示例：3、3.5、2:30、2.30、1:27:15 或 1.27.15")
 
         while True:
-            end_time = input("请输入结束时间（秒或分:秒格式，0表示不剪切结尾）: ").strip()
+            end_time = input("请输入结束时间（格式：秒、分:秒、小时:分钟:秒，支持.作为分隔符（如2.30视为2:30），纯秒数小数点后限一位数字，0表示不剪切结尾）: ").strip()
             if validate_time(end_time):
                 # 转换为秒数
                 end_seconds = convert_to_seconds(end_time)
                 if end_seconds >= 0:
                     break
-            print("时间格式错误，示例：120、120.5 或 5:30")
+            print("时间格式错误，示例：3、3.5、2:30、2.30、1:27:15 或 1.27.15")
 
         # 生成备份文件名
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')

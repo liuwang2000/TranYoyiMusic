@@ -47,3 +47,4 @@ directory.log
 director*
 *.log
 config.ini
+rename_log.txt

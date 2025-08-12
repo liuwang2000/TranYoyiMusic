@@ -108,3 +108,27 @@
 完成扫描! 耗时: 0.00秒
 总计: 重命名 1 个文件
 --- 结束于 2025-04-27 21:44:00 ---
+
+--- 开始于 2025-05-01 14:16:03 ---
+扫描目录: D:\BaiduSyncdisk\AAA_lw\cover
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《配不上你》早知道还是又神_p😭q.1347193564.2025-04-30_18_24_10.jpeg' -> 'D:\BaiduSyncdisk\AAA_lw\cover\screenshot-【又一歌】《配不上你》早知道还是又神_p_q.1347193564.2025-04-30_18_24_10.jpeg'
+
+完成扫描! 耗时: 0.00秒
+总计: 重命名 1 个文件
+--- 结束于 2025-05-01 14:16:03 ---
+
+--- 开始于 2025-05-17 16:35:20 ---
+扫描目录: D:\BaiduSyncdisk\AAA_lw\cover
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋0.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_0.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋1.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_1.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋2.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_2.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋3.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_3.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋4.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_4.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋5.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_5.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋6.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_6.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋7.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_7.png'
+重命名: 'D:\BaiduSyncdisk\AAA_lw\cover\📍𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷🦋8.png' -> 'D:\BaiduSyncdisk\AAA_lw\cover\_𝒀𝒖𝒏𝑵𝒂𝒏 ｜蓝月谷_8.png'
+
+完成扫描! 耗时: 0.01秒
+总计: 重命名 9 个文件
+--- 结束于 2025-05-17 16:35:20 ---
